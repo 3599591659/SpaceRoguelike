@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Rogue</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 开始菜单 -->
+    <div id="startMenu" class="overlay">
+        <div class="panel startPanel">
+            <h1>SPACE ROGUE</h1>
+            <p>科幻肉鸽 · 第一阶段</p>
+
+            <button id="startBtn" class="menuBtn">
+                开始游戏
+            </button>
+        </div>
+    </div>
+
+    <!-- 游戏 -->
+    <canvas id="game"></canvas>
+
+    <!-- HUD -->
+    <div id="hud">
+
+        <div class="left">
+
+            <div class="hudItem">
+                ❤️ HP
+                <span id="hpText">100</span>
+            </div>
+
+            <div class="hudItem">
+                ⭐ Lv
+                <span id="lvText">1</span>
+            </div>
+
+            <div class="hudItem">
+                EXP
+                <span id="expText">0</span>
+                /
+                <span id="nextExpText">10</span>
+            </div>
+
+        </div>
+
+        <button id="pauseBtn">
+            ⏸
+        </button>
+
+    </div>
+
+    <!-- 暂停 -->
+    <div id="pauseMenu" class="overlay hidden">
+
+        <div class="panel">
+
+            <h2>PAUSED</h2>
+
+            <button id="resumeBtn" class="menuBtn">
+                继续游戏
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- 升级 -->
+    <div id="levelUp" class="overlay hidden">
+
+        <div class="panel">
+
+            <h2>LEVEL UP</h2>
+
+            <p>请选择一个强化</p>
+
+            <div id="choices"></div>
+
+        </div>
+
+    </div>
+
+    <!-- GameOver -->
+
+    <div id="gameOver" class="overlay hidden">
+
+        <div class="panel">
+
+            <h2>GAME OVER</h2>
+
+            <p id="finalText"></p>
+
+            <button id="restartBtn" class="menuBtn">
+
+                重新开始
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- 摇杆 -->
+
+    <div id="joystick">
+
+        <div id="stick"></div>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+
+</html>

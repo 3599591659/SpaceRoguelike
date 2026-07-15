@@ -1,0 +1,322 @@
+html,
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#050814;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+*{
+    box-sizing:border-box;
+    user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+}
+
+canvas{
+    display:block;
+    width:100vw;
+    height:100vh;
+    background:
+    radial-gradient(circle at center,#10254b 0%,#081325 45%,#000 100%);
+}
+
+/*========================
+        HUD
+========================*/
+
+#hud{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:15px;
+
+    z-index:50;
+
+    pointer-events:none;
+
+}
+
+.left{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.hudItem{
+
+    color:#7fe8ff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    text-shadow:0 0 12px cyan;
+
+}
+
+#pauseBtn{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:22px;
+
+    color:white;
+
+    background:#123f71;
+
+    box-shadow:0 0 15px cyan;
+
+    pointer-events:auto;
+
+}
+
+/*========================
+        Overlay
+========================*/
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.68);
+
+    z-index:100;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/*========================
+        Panel
+========================*/
+
+.panel{
+
+    width:340px;
+
+    max-width:90vw;
+
+    padding:26px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:white;
+
+    border:2px solid #5de3ff;
+
+    background:#0d1d39;
+
+    box-shadow:0 0 30px cyan;
+
+}
+
+.panel h1{
+
+    margin-top:0;
+
+    margin-bottom:10px;
+
+    color:#7beeff;
+
+    font-size:42px;
+
+}
+
+.panel h2{
+
+    margin-top:0;
+
+    color:#7beeff;
+
+}
+
+.panel p{
+
+    color:#bfefff;
+
+}
+
+/*========================
+        Button
+========================*/
+
+.menuBtn{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:#1d8fff;
+
+    transition:.2s;
+
+}
+
+.menuBtn:active{
+
+    transform:scale(.96);
+
+}
+
+/*========================
+      Level Up
+========================*/
+
+#choices{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.choiceBtn{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    font-size:17px;
+
+    color:white;
+
+    background:#2579ff;
+
+}
+
+.choiceBtn:active{
+
+    transform:scale(.97);
+
+}
+
+/*========================
+      Joystick
+========================*/
+
+#joystick{
+
+    position:fixed;
+
+    left:28px;
+
+    bottom:28px;
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,255,255,.15);
+
+    z-index:80;
+
+    touch-action:none;
+
+}
+
+#stick{
+
+    position:absolute;
+
+    left:35px;
+
+    top:35px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#67d7ff;
+
+    box-shadow:0 0 18px cyan;
+
+}
+
+/*========================
+      Responsive
+========================*/
+
+@media (max-width:700px){
+
+.left{
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.hudItem{
+
+    font-size:16px;
+
+}
+
+.panel{
+
+    width:300px;
+
+}
+
+}
